@@ -1,19 +1,21 @@
 var app = angular.module("reddit");
 
 app.factory("redditService", function($http){
-	var getAww = $http.get("https://www.reddit.com/r/aww/.json");
+var subReddit = "";
+	function getReddit(){
+		console.log(subReddit);
+		return $http.get("https://www.reddit.com/r/"+subReddit+"/.json");
+	}
 
 
 	return {
-		saveData: function(){
+		chooseSubReddit: function(reddit){
+			subReddit = reddit;
+		},
 
-		}
+		getReddit: getReddit
 
-		getData: function(){
-
-		}
-
-	},
+	};
 
 });
 
