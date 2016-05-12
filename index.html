@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Retrieving Reddit</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+	<script src="script.js"></script>
+	<script src="selectController.js"></script>
+	<script src="displayController.js"></script>
+	<script src="service.js"></script>
+</head>
+<body ng-app="reddit">
+	<ul>
+		<li><a href="#/select.html">Select</li>
+		<li><a href="#/display">Display</li>
+	</ul>
+	<div ng-view=""></div>
+</body>
+</html>
